@@ -1,2 +1,37 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# =================================================================
+# 1. PR 노이즈 감소를 위한 핵심 설정 (Linguist Generated)
+# =================================================================
+#.meta 파일을 "생성된 파일"로 취급하여 PR Diff에서 기본적으로 숨김(접음) 처리합니다.
+# 이것이 질문하신 문제(File Changed 개수 폭증)를 해결하는 핵심 줄입니다.
+*.meta linguist-generated=true
+
+# (선택 사항) 씬, 프리팹, 에셋 등도 텍스트 양이 방대하므로 함께 접어두면 리뷰가 편해집니다.
+# 필요할 때 클릭해서 펼쳐볼 수 있습니다.
+*.unity linguist-generated=true
+*.prefab linguist-generated=true
+*.asset linguist-generated=true
+*.mat linguist-generated=true
+*.anim linguist-generated=true
+*.controller linguist-generated=true
+
+# =================================================================
+# 2. 병합 충돌 해결을 위한 설정 (Unity YAML Merge)
+# =================================================================
+# 유니티 전용 병합 도구(UnityYAMLMerge)를 사용하도록 지정합니다.
+# 여러 사람이 같은 씬이나 프리팹을 수정했을 때 충돌을 더 똑똑하게 해결해줍니다.
+*.meta merge=unityyamlmerge
+*.unity merge=unityyamlmerge
+*.prefab merge=unityyamlmerge
+*.asset merge=unityyamlmerge
+*.mat merge=unityyamlmerge
+*.anim merge=unityyamlmerge
+*.controller merge=unityyamlmerge
+
+# =================================================================
+# 3. 줄바꿈 문자 정규화 (선택 사항)
+# =================================================================
+# 윈도우(CRLF)와 맥(LF) 간의 줄바꿈 문자 차이로 인한 불필요한 변경을 방지합니다.
+*.cs text eol=lf
+*.shader text eol=lf
