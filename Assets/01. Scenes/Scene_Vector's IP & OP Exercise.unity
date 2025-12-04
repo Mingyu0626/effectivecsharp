@@ -553,7 +553,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 1191284138}
   _detectionAngle: 90
-  _showDebugInfo: 1
   _visualSettings:
     LineLength: 2
     ForwardColor: {r: 1, g: 0, b: 0, a: 1}
@@ -767,13 +766,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030983272}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.42943153, y: -0, z: -0, w: 0.9030994}
-  m_LocalPosition: {x: -0.1, y: 7.75, z: -6.28}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50.863, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &2030983276
 MonoBehaviour:
   m_ObjectHideFlags: 0
