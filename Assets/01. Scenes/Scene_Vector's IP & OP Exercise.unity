@@ -413,8 +413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86285e294054aa440b7c86cf260bf266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  rotationSpeed: 100
+  _moveSpeed: 2
 --- !u!1 &1807163062
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375cbecd8382dbd41b4440b72c071f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 100
+  _rotationSpeed: 100
 --- !u!114 &1807163068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,14 +551,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b194ce2863830439e695593cce91e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1191284138}
-  detectionAngle: 90
-  showDebugInfo: 1
-  lineLength: 2
-  forwardColor: {r: 0, g: 0, b: 1, a: 1}
-  toTargetColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  frontColor: {r: 0, g: 1, b: 0, a: 1}
-  backColor: {r: 1, g: 0, b: 0, a: 1}
+  _target: {fileID: 1191284138}
+  _detectionAngle: 90
+  _showDebugInfo: 1
+  _visualSettings:
+    LineLength: 2
+    ForwardColor: {r: 1, g: 0, b: 0, a: 1}
+    ToTargetColor: {r: 1, g: 0.99997795, b: 0, a: 1}
+    FrontColor: {r: 0, g: 1, b: 0, a: 1}
+    BackColor: {r: 0, g: 0, b: 1, a: 1}
 --- !u!1 &1901942006
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,6 @@ public class DotProductDetector : MonoBehaviour
 
     [Header("Detection Settings")]
     [SerializeField] private float _detectionAngle = 90f;
-    [SerializeField] private bool _showDebugInfo = true;
 
     [Header("Visualization")]
     [SerializeField] private VisualizationSettings _visualSettings;
@@ -49,11 +48,13 @@ public class DotProductDetector : MonoBehaviour
     private void Update()
     {
         DetectionResult result = CalculateDetection();
-        if (_showDebugInfo)
-        {
-            DrawDebugLines(result);
-            DisplayDebugInfo(result);
-        }
+        PrintDebugInfo(result);
+    }
+
+    private void OnDrawGizmos()
+    {
+        DetectionResult result = CalculateDetection();
+        DrawDebugGizmo(result);
     }
 
     private DetectionResult CalculateDetection()
@@ -63,22 +64,22 @@ public class DotProductDetector : MonoBehaviour
         return new DetectionResult(forward, toTarget);
     }
 
-    private void DrawDebugLines(DetectionResult result)
+    private void DrawDebugGizmo(DetectionResult result)
     {
-        Debug.DrawRay(transform.position, transform.forward * _visualSettings.LineLength, _visualSettings.ForwardColor);
+        // 1. 캐릭터 위치에 그려지는 구
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, 0.3f);
 
-        Vector3 toTarget = (_target.position - transform.position).normalized;
-        Debug.DrawRay(transform.position, toTarget * _visualSettings.LineLength, _visualSettings.ToTargetColor);
+        // 2. 목표물 위치에 그려지는 구 (앞/뒤 여부에 따라 색상 변경)
+        Gizmos.color = result.IsInFront ? _visualSettings.FrontColor : _visualSettings.BackColor;
+        Gizmos.DrawWireSphere(_target.position, 0.3f);
 
-        Color targetColor = result.IsInFront ? _visualSettings.FrontColor : _visualSettings.BackColor;
-        Debug.DrawLine(
-            _target.position + Vector3.up * 0.5f,
-            _target.position - Vector3.up * 0.5f,
-            targetColor
-        );
+        // 3. 캐릭터와 타겟을 잇는 연결선
+        Gizmos.color = Color.white;
+        Gizmos.DrawLine(transform.position, _target.position);
     }
 
-    void DisplayDebugInfo(DetectionResult result)
+    void PrintDebugInfo(DetectionResult result)
     {
         string relativeTargetDirection = result.IsInFront ? "앞쪽" : "뒤쪽";
         Debug.Log($"[내적 판별] Dot: {result.DotProduct:F3} | 위치: {relativeTargetDirection} | 각도: {result.Angle:F1}°");
