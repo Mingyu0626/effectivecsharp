@@ -1,125 +1,86 @@
 using UnityEngine;
+using System;
 
 public class DotProductDetector : MonoBehaviour
 {
     [Header("Target Settings")]
-    [SerializeField] private Transform target;
-    
+    [SerializeField] private Transform _target;
+
     [Header("Detection Settings")]
-    [SerializeField] private float detectionAngle = 90f;
-    [SerializeField] private bool showDebugInfo = true;
-    
+    [SerializeField] private float _detectionAngle = 90f;
+    [SerializeField] private bool _showDebugInfo = true;
+
     [Header("Visualization")]
-    [SerializeField] private float lineLength = 2f;
-    [SerializeField] private Color forwardColor = Color.blue;
-    [SerializeField] private Color toTargetColor = Color.yellow;
-    [SerializeField] private Color frontColor = Color.green;
-    [SerializeField] private Color backColor = Color.red;
-    
-    private float dotProduct;
-    private bool isInFront;
-    
-    void Update()
+    [SerializeField] private VisualizationSettings _visualSettings;
+
+
+    [Serializable]
+    public struct VisualizationSettings
     {
-        if (target == null)
+        public float LineLength;
+        public Color ForwardColor;
+        public Color ToTargetColor;
+        public Color FrontColor;
+        public Color BackColor;
+    }
+
+    public readonly struct DetectionResult
+    {
+        public readonly float DotProduct;
+        public readonly bool IsInFront;
+        public readonly float Angle;
+
+        public DetectionResult(Vector3 forward, Vector3 toTarget)
         {
-            Debug.LogWarning("Target이 설정되지 않았습니다!");
-            return;
-        }
-        
-        CalculateDotProduct();
-        
-        if (showDebugInfo)
-        {
-            DrawDebugLines();
-            DisplayDebugInfo();
+            DotProduct = Vector3.Dot(forward, toTarget);
+            IsInFront = DotProduct > 0;
+            Angle = Mathf.Acos(Mathf.Clamp(DotProduct, -1f, 1f)) * Mathf.Rad2Deg;
         }
     }
-    
-    /// <summary>
-    /// 내적을 계산하여 목표물이 앞에 있는지 뒤에 있는지 판별
-    /// </summary>
-    void CalculateDotProduct()
+
+    private void Awake()
     {
-        // 캐릭터의 앞 방향 벡터
+        if (_target == null)
+        {
+            throw new NullReferenceException("Target의 Transform이 할당되지 않았습니다.");
+        }
+    }
+
+    private void Update()
+    {
+        DetectionResult result = CalculateDetection();
+        if (_showDebugInfo)
+        {
+            DrawDebugLines(result);
+            DisplayDebugInfo(result);
+        }
+    }
+
+    private DetectionResult CalculateDetection()
+    {
         Vector3 forward = transform.forward;
-        
-        // 캐릭터에서 목표물로 향하는 방향 벡터
-        Vector3 toTarget = (target.position - transform.position).normalized;
-        
-        // 내적 계산
-        // dot > 0: 목표물이 앞쪽에 위치
-        // dot < 0: 목표물이 뒤쪽에 위치
-        // dot = 0: 목표물이 정확히 옆에 위치
-        dotProduct = Vector3.Dot(forward, toTarget);
-        
-        // 앞/뒤 판별
-        isInFront = dotProduct > 0;
+        Vector3 toTarget = (_target.position - transform.position).normalized;
+        return new DetectionResult(forward, toTarget);
     }
-    
-    /// <summary>
-    /// 디버그용 선 그리기
-    /// </summary>
-    void DrawDebugLines()
+
+    private void DrawDebugLines(DetectionResult result)
     {
-        // 캐릭터의 앞 방향 표시 (파란색)
-        Debug.DrawRay(transform.position, transform.forward * lineLength, forwardColor);
-        
-        // 캐릭터에서 목표물로 향하는 방향 표시 (노란색)
-        Vector3 toTarget = (target.position - transform.position).normalized;
-        Debug.DrawRay(transform.position, toTarget * lineLength, toTargetColor);
-        
-        // 목표물 위치에 표시 (앞: 초록색, 뒤: 빨간색)
+        Debug.DrawRay(transform.position, transform.forward * _visualSettings.LineLength, _visualSettings.ForwardColor);
+
+        Vector3 toTarget = (_target.position - transform.position).normalized;
+        Debug.DrawRay(transform.position, toTarget * _visualSettings.LineLength, _visualSettings.ToTargetColor);
+
+        Color targetColor = result.IsInFront ? _visualSettings.FrontColor : _visualSettings.BackColor;
         Debug.DrawLine(
-            target.position + Vector3.up * 0.5f, 
-            target.position - Vector3.up * 0.5f, 
-            isInFront ? frontColor : backColor
+            _target.position + Vector3.up * 0.5f,
+            _target.position - Vector3.up * 0.5f,
+            targetColor
         );
     }
-    
-    /// <summary>
-    /// 화면에 디버그 정보 표시
-    /// </summary>
-    void DisplayDebugInfo()
+
+    void DisplayDebugInfo(DetectionResult result)
     {
-        string position = isInFront ? "앞쪽" : "뒤쪽";
-        float angle = Mathf.Acos(dotProduct) * Mathf.Rad2Deg;
-        
-        Debug.Log($"[내적 판별] Dot Product: {dotProduct:F3} | 위치: {position} | 각도: {angle:F1}°");
-    }
-    
-    /// <summary>
-    /// 목표물이 특정 각도 내에 있는지 확인 (추가 기능)
-    /// </summary>
-    public bool IsTargetInViewAngle()
-    {
-        Vector3 forward = transform.forward;
-        Vector3 toTarget = (target.position - transform.position).normalized;
-        float dot = Vector3.Dot(forward, toTarget);
-        
-        // 내적 값을 각도로 변환하여 비교
-        float angle = Mathf.Acos(dot) * Mathf.Rad2Deg;
-        return angle <= detectionAngle;
-    }
-    
-    // Public 접근자
-    public float GetDotProduct() => dotProduct;
-    public bool IsTargetInFront() => isInFront;
-    
-    void OnDrawGizmos()
-    {
-        if (target == null) return;
-        
-        // 캐릭터 위치에 작은 구 표시
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(transform.position, 0.3f);
-        
-        // 목표물 위치에 구 표시
-        Gizmos.color = isInFront ? frontColor : backColor;
-        Gizmos.DrawWireSphere(target.position, 0.3f);
-        
-        // 연결선
-        Gizmos.color = Color.white;
-        Gizmos.DrawLine(transform.position, target.position);
+        string relativeTargetDirection = result.IsInFront ? "앞쪽" : "뒤쪽";
+        Debug.Log($"[내적 판별] Dot: {result.DotProduct:F3} | 위치: {relativeTargetDirection} | 각도: {result.Angle:F1}°");
     }
 }
