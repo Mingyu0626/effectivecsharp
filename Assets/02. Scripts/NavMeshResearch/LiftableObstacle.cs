@@ -3,7 +3,7 @@ using UnityEngine;
 public class LiftableObstacle : MonoBehaviour
 {
     [SerializeField]
-    private float _liftScalar;
+    private float _liftSpeed;
 
     private void Update()
     {
@@ -13,17 +13,17 @@ public class LiftableObstacle : MonoBehaviour
 
     private void LiftUp()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKey(KeyCode.Q))
         {
-            transform.position += Vector3.up * _liftScalar;
+            transform.position += Vector3.up * _liftSpeed * Time.deltaTime;
         }
     }
 
     private void LiftDown()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKey(KeyCode.E))
         {
-            transform.position += Vector3.down * _liftScalar;
+            transform.position += Vector3.down * _liftSpeed * Time.deltaTime;
         }
     }
 }

@@ -5,12 +5,12 @@ public class NavMeshObserver : MonoBehaviour
 {
     private void OnEnable()
     {
-        NavMesh.onPreUpdate += OnNavMeshUpdated;
+        // NavMesh.onPreUpdate += OnNavMeshUpdated;
     }
 
     private void OnDisable()
     {
-        NavMesh.onPreUpdate -= OnNavMeshUpdated;
+        // NavMesh.onPreUpdate -= OnNavMeshUpdated;
     }
 
     private void OnNavMeshUpdated()

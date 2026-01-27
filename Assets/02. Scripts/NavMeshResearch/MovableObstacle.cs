@@ -3,7 +3,7 @@ using UnityEngine;
 public class MovableObstacle : MonoBehaviour
 {
     [SerializeField]
-    private int _movementSpeed;
+    private float _movementSpeed;
 
     private Vector3 _movementDirection;
     private bool _isMoving = false;
