@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="0.0.0.0">
-  <Summary numSequencePoints="21" visitedSequencePoints="21" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="4" numMethods="4" />
+  <Summary numSequencePoints="16" visitedSequencePoints="16" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="4" numMethods="4" />
   <Modules>
     <Module>
-      <Summary numSequencePoints="21" visitedSequencePoints="21" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="4" numMethods="4" />
+      <Summary numSequencePoints="16" visitedSequencePoints="16" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="4" numMethods="4" />
       <ModuleTime>0001-01-01T00:00:00</ModuleTime>
       <ModuleName>Production</ModuleName>
       <Files>
@@ -23,7 +23,7 @@
       </Files>
       <Classes>
         <Class>
-          <Summary numSequencePoints="21" visitedSequencePoints="21" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="4" numMethods="4" />
+          <Summary numSequencePoints="16" visitedSequencePoints="16" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="4" numMethods="4" />
           <FullName>Calculator</FullName>
           <Methods>
             <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
@@ -32,9 +32,9 @@
               <Name>System.Int32 Calculator::Add(System.Int32, System.Int32)</Name>
               <FileRef uid="8" />
               <SequencePoints>
-                <SequencePoint vc="3" uspid="495" ordinal="0" offset="0" sl="6" sc="5" el="6" ec="5" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="3" uspid="496" ordinal="0" offset="1" sl="7" sc="9" el="7" ec="9" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="3" uspid="497" ordinal="0" offset="7" sl="8" sc="5" el="8" ec="5" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="3" uspid="1278" ordinal="0" offset="0" sl="6" sc="5" el="6" ec="5" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="3" uspid="1279" ordinal="0" offset="1" sl="7" sc="9" el="7" ec="9" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="3" uspid="1280" ordinal="0" offset="7" sl="8" sc="5" el="8" ec="5" bec="0" bev="0" fileid="8" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -44,9 +44,9 @@
               <Name>System.Int32 Calculator::Subtract(System.Int32, System.Int32)</Name>
               <FileRef uid="8" />
               <SequencePoints>
-                <SequencePoint vc="3" uspid="498" ordinal="0" offset="0" sl="11" sc="5" el="11" ec="5" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="3" uspid="499" ordinal="0" offset="1" sl="12" sc="9" el="12" ec="9" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="3" uspid="500" ordinal="0" offset="7" sl="13" sc="5" el="13" ec="5" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="3" uspid="1281" ordinal="0" offset="0" sl="11" sc="5" el="11" ec="5" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="3" uspid="1282" ordinal="0" offset="1" sl="12" sc="9" el="12" ec="9" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="3" uspid="1283" ordinal="0" offset="7" sl="13" sc="5" el="13" ec="5" bec="0" bev="0" fileid="8" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -56,30 +56,25 @@
               <Name>System.Double Calculator::Multiplication(System.Int32, System.Int32)</Name>
               <FileRef uid="8" />
               <SequencePoints>
-                <SequencePoint vc="5" uspid="501" ordinal="0" offset="0" sl="16" sc="5" el="16" ec="5" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="5" uspid="502" ordinal="0" offset="1" sl="17" sc="9" el="17" ec="9" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="5" uspid="503" ordinal="0" offset="8" sl="18" sc="5" el="18" ec="5" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="5" uspid="1284" ordinal="0" offset="0" sl="16" sc="5" el="16" ec="5" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="5" uspid="1285" ordinal="0" offset="1" sl="17" sc="9" el="17" ec="9" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="5" uspid="1286" ordinal="0" offset="9" sl="18" sc="5" el="18" ec="5" bec="0" bev="0" fileid="8" />
               </SequencePoints>
               <BranchPoints />
             </Method>
             <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
-              <Summary numSequencePoints="12" visitedSequencePoints="12" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <Summary numSequencePoints="7" visitedSequencePoints="7" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken>100663327</MetadataToken>
               <Name>System.Nullable[Double] Calculator::Division(System.Int32, System.Int32)</Name>
               <FileRef uid="8" />
               <SequencePoints>
-                <SequencePoint vc="7" uspid="504" ordinal="0" offset="0" sl="21" sc="5" el="21" ec="5" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="7" uspid="505" ordinal="0" offset="1" sl="22" sc="9" el="22" ec="9" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="7" uspid="506" ordinal="0" offset="17" sl="24" sc="9" el="24" ec="9" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="7" uspid="507" ordinal="0" offset="18" sl="25" sc="13" el="25" ec="13" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="5" uspid="508" ordinal="0" offset="28" sl="26" sc="9" el="26" ec="9" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="2" uspid="509" ordinal="0" offset="31" sl="27" sc="9" el="27" ec="9" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="2" uspid="510" ordinal="0" offset="32" sl="28" sc="9" el="28" ec="9" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="2" uspid="511" ordinal="0" offset="33" sl="29" sc="13" el="29" ec="13" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="2" uspid="512" ordinal="0" offset="40" sl="30" sc="13" el="30" ec="13" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="2" uspid="513" ordinal="0" offset="48" sl="31" sc="9" el="31" ec="9" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="7" uspid="514" ordinal="0" offset="51" sl="32" sc="9" el="32" ec="9" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="7" uspid="515" ordinal="0" offset="55" sl="33" sc="5" el="33" ec="5" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="7" uspid="1287" ordinal="0" offset="0" sl="21" sc="5" el="21" ec="5" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="7" uspid="1288" ordinal="0" offset="1" sl="22" sc="9" el="22" ec="9" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="2" uspid="1289" ordinal="0" offset="9" sl="23" sc="9" el="23" ec="9" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="2" uspid="1290" ordinal="0" offset="10" sl="24" sc="13" el="24" ec="13" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="2" uspid="1291" ordinal="0" offset="21" sl="25" sc="13" el="25" ec="13" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="5" uspid="1292" ordinal="0" offset="33" sl="27" sc="9" el="27" ec="9" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="7" uspid="1293" ordinal="0" offset="46" sl="28" sc="5" el="28" ec="5" bec="0" bev="0" fileid="8" />
               </SequencePoints>
               <BranchPoints />
             </Method>

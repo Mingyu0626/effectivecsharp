@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2026-01-28_17-36-05" tag="">
+  <assembly name="Production">
+    <class name="AutoMoveObstacle" coveredlines="0" coverablelines="8" totallines="28" coveredbranches="0" totalbranches="0" />
+    <class name="Calculator" coveredlines="21" coverablelines="21" totallines="34" coveredbranches="0" totalbranches="0" />
+    <class name="CharacterRotator" coveredlines="0" coverablelines="14" totallines="26" coveredbranches="0" totalbranches="0" />
+    <class name="ConcurrentDictionaryTest" coveredlines="0" coverablelines="66" totallines="96" coveredbranches="0" totalbranches="0" />
+    <class name="ConcurrentQueueTest" coveredlines="0" coverablelines="62" totallines="92" coveredbranches="0" totalbranches="0" />
+    <class name="ConcurrentStackTest" coveredlines="0" coverablelines="62" totallines="92" coveredbranches="0" totalbranches="0" />
+    <class name="DotProductDetector" coveredlines="0" coverablelines="36" totallines="87" coveredbranches="0" totalbranches="0" />
+    <class name="DungeonLoader" coveredlines="0" coverablelines="28" totallines="56" coveredbranches="0" totalbranches="0" />
+    <class name="LiftableObstacle" coveredlines="0" coverablelines="16" totallines="31" coveredbranches="0" totalbranches="0" />
+    <class name="MovableObstacle" coveredlines="0" coverablelines="34" totallines="55" coveredbranches="0" totalbranches="0" />
+    <class name="NavMeshObserver" coveredlines="0" coverablelines="7" totallines="20" coveredbranches="0" totalbranches="0" />
+    <class name="TargetMover" coveredlines="0" coverablelines="10" totallines="26" coveredbranches="0" totalbranches="0" />
+    <class name="UnitaskExample" coveredlines="0" coverablelines="11" totallines="24" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>

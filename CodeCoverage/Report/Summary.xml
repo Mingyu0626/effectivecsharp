@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>2026-01-28 - 오후 5:26:29</Generatedon>
+    <Generatedon>2026-01-28 - 오후 5:51:42</Generatedon>
     <Parser>MultiReportParser (2x OpenCoverParser)</Parser>
     <Assemblies>1</Assemblies>
     <Classes>13</Classes>
     <Files>13</Files>
-    <Coveredlines>21</Coveredlines>
+    <Coveredlines>16</Coveredlines>
     <Uncoveredlines>354</Uncoveredlines>
-    <Coverablelines>375</Coverablelines>
-    <Totallines>667</Totallines>
-    <Linecoverage>5.6</Linecoverage>
+    <Coverablelines>370</Coverablelines>
+    <Totallines>662</Totallines>
+    <Linecoverage>4.3</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
     <Coveredmethods>4</Coveredmethods>
@@ -18,9 +18,9 @@
     <Methodcoverage>8.5</Methodcoverage>
   </Summary>
   <Coverage>
-    <Assembly name="Production" classes="13" coverage="5.6" coveredlines="21" coverablelines="375" totallines="667" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="47" methodcoverage="8.5">
+    <Assembly name="Production" classes="13" coverage="4.3" coveredlines="16" coverablelines="370" totallines="662" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="47" methodcoverage="8.5">
       <Class name="AutoMoveObstacle" coverage="0" coveredlines="0" coverablelines="8" totallines="28" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
-      <Class name="Calculator" coverage="100" coveredlines="21" coverablelines="21" totallines="34" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="4" methodcoverage="100" />
+      <Class name="Calculator" coverage="100" coveredlines="16" coverablelines="16" totallines="29" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="4" methodcoverage="100" />
       <Class name="CharacterRotator" coverage="0" coveredlines="0" coverablelines="14" totallines="26" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
       <Class name="ConcurrentDictionaryTest" coverage="0" coveredlines="0" coverablelines="66" totallines="96" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
       <Class name="ConcurrentQueueTest" coverage="0" coveredlines="0" coverablelines="62" totallines="92" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />

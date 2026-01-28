@@ -1,16 +1,16 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 2026-01-28 - 오후 5:26:29 |
+| Generated on: | 2026-01-28 - 오후 5:51:42 |
 | Parser: | MultiReportParser (2x OpenCoverParser) |
 | Assemblies: | 1 |
 | Classes: | 13 |
 | Files: | 13 |
-| Covered lines: | 21 |
+| Covered lines: | 16 |
 | Uncovered lines: | 354 |
-| Coverable lines: | 375 |
-| Total lines: | 667 |
-| Line coverage: | 5.6% (21 of 375) |
+| Coverable lines: | 370 |
+| Total lines: | 662 |
+| Line coverage: | 4.3% (16 of 370) |
 | Covered branches: | 0 |
 | Total branches: | 0 |
 | Covered methods: | 4 |
@@ -19,9 +19,9 @@
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|**Covered**|**Total**|**Method coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-|**Production**|**21**|**354**|**375**|**667**|**5.6%**|**0**|**0**|****|**4**|**47**|**8.5%**|
+|**Production**|**16**|**354**|**370**|**662**|**4.3%**|**0**|**0**|****|**4**|**47**|**8.5%**|
 |AutoMoveObstacle|0|8|8|28|0%|0|0||0|2|0%|
-|Calculator|21|0|21|34|100%|0|0||4|4|100%|
+|Calculator|16|0|16|29|100%|0|0||4|4|100%|
 |CharacterRotator|0|14|14|26|0%|0|0||0|3|0%|
 |ConcurrentDictionaryTest|0|66|66|96|0%|0|0||0|3|0%|
 |ConcurrentQueueTest|0|62|62|92|0%|0|0||0|3|0%|
