@@ -107,6 +107,10 @@ public class CalculatorTests
     [TestCase(5, 2, 2.5)]
     public void ProductionCirculatorDivision(int dividend, int divisor, double? expected)
     {
+        if (divisor == 0)
+        {
+            LogAssert.Expect(LogType.Exception, "0으로 나누면 안돼!");
+        }
         Assert.AreEqual(_calculator.Division(dividend, divisor), expected);
     }
 }
