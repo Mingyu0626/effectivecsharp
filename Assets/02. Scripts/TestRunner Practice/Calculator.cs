@@ -14,21 +14,16 @@ public class Calculator
 
     public double Multiplication(int a, int b)
     {
-        return a * b;
+        return (double)a * b;
     }
 
     public double? Division(int dividend, int divisor)
     {
-        double? result = 0.0;
-        try
+        if (divisor == 0)
         {
-            result = dividend / divisor;
+            Debug.LogError("0으로 나눌 수는 없습니다.");
+            return null;
         }
-        catch (DivideByZeroException e)
-        {
-            Debug.LogException(e);
-            result = null;
-        }
-        return result;
+        return (double)dividend / divisor;
     }
 }

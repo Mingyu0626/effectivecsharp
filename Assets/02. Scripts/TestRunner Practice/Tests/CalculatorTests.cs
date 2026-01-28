@@ -109,7 +109,7 @@ public class CalculatorTests
     {
         if (divisor == 0)
         {
-            LogAssert.Expect(LogType.Exception, "DivideByZeroException: Attempted to divide by zero.");
+            LogAssert.Expect(LogType.Error, "0으로 나눌 수는 없습니다.");
         }
         Assert.AreEqual(_calculator.Division(dividend, divisor), expected);
     }
