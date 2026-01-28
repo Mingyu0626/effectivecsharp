@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "generatedon": "2026-01-28T06:59:27Z",
+    "parser": "MultiReportParser (2x OpenCoverParser)",
+    "assemblies": 3,
+    "classes": 21,
+    "files": 20,
+    "coveredlines": 19,
+    "uncoveredlines": 1084,
+    "coverablelines": 1103,
+    "totallines": 2624,
+    "linecoverage": 1.7,
+    "coveredbranches": 0,
+    "totalbranches": 0,
+    "coveredmethods": 7,
+    "totalmethods": 168,
+    "methodcoverage": 4.1
+ },
+  "coverage": {
+    "assemblies": [
+      { "name": "Assembly-CSharp", "classes": 12, "coverage": 0, "coveredlines": 0, "coverablelines": 354, "totallines": 633, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 43, "classesinassembly": [
+        { "name": "AutoMoveObstacle", "coverage": 0, "coveredlines": 0, "coverablelines": 8, "totallines": 28, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 2 },
+        { "name": "CharacterRotator", "coverage": 0, "coveredlines": 0, "coverablelines": 14, "totallines": 26, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
+        { "name": "ConcurrentDictionaryTest", "coverage": 0, "coveredlines": 0, "coverablelines": 66, "totallines": 96, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
+        { "name": "ConcurrentQueueTest", "coverage": 0, "coveredlines": 0, "coverablelines": 62, "totallines": 92, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
+        { "name": "ConcurrentStackTest", "coverage": 0, "coveredlines": 0, "coverablelines": 62, "totallines": 92, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
+        { "name": "DotProductDetector", "coverage": 0, "coveredlines": 0, "coverablelines": 36, "totallines": 87, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 8 },
+        { "name": "DungeonLoader", "coverage": 0, "coveredlines": 0, "coverablelines": 28, "totallines": 56, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 5 },
+        { "name": "LiftableObstacle", "coverage": 0, "coveredlines": 0, "coverablelines": 16, "totallines": 31, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
+        { "name": "MovableObstacle", "coverage": 0, "coveredlines": 0, "coverablelines": 34, "totallines": 55, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
+        { "name": "NavMeshObserver", "coverage": 0, "coveredlines": 0, "coverablelines": 7, "totallines": 20, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
+        { "name": "TargetMover", "coverage": 0, "coveredlines": 0, "coverablelines": 10, "totallines": 26, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
+        { "name": "UnitaskExample", "coverage": 0, "coveredlines": 0, "coverablelines": 11, "totallines": 24, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 } ] },
+      { "name": "Assembly-CSharp-firstpass", "classes": 8, "coverage": 0, "coveredlines": 0, "coverablelines": 725, "totallines": 2307, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 117, "classesinassembly": [
+        { "name": "DG.Tweening.DOTweenCYInstruction", "coverage": 0, "coveredlines": 0, "coverablelines": 44, "totallines": 389, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 12 },
+        { "name": "DG.Tweening.DOTweenModuleAudio", "coverage": 0, "coveredlines": 0, "coverablelines": 56, "totallines": 198, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 15 },
+        { "name": "DG.Tweening.DOTweenModulePhysics", "coverage": 0, "coveredlines": 0, "coverablelines": 83, "totallines": 216, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 11 },
+        { "name": "DG.Tweening.DOTweenModulePhysics2D", "coverage": 0, "coveredlines": 0, "coverablelines": 76, "totallines": 193, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 9 },
+        { "name": "DG.Tweening.DOTweenModuleSprite", "coverage": 0, "coveredlines": 0, "coverablelines": 34, "totallines": 93, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
+        { "name": "DG.Tweening.DOTweenModuleUI", "coverage": 0, "coveredlines": 0, "coverablelines": 268, "totallines": 662, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 43 },
+        { "name": "DG.Tweening.DOTweenModuleUnityVersion", "coverage": 0, "coveredlines": 0, "coverablelines": 118, "totallines": 389, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 16 },
+        { "name": "DG.Tweening.DOTweenModuleUtils", "coverage": 0, "coveredlines": 0, "coverablelines": 46, "totallines": 167, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 7 } ] },
+      { "name": "Tests", "classes": 1, "coverage": 79.1, "coveredlines": 19, "coverablelines": 24, "totallines": 73, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 87.5, "coveredmethods": 7, "totalmethods": 8, "classesinassembly": [
+        { "name": "CalculatorTests", "coverage": 79.1, "coveredlines": 19, "coverablelines": 24, "totallines": 73, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 87.5, "coveredmethods": 7, "totalmethods": 8 } ] } ]
+  }
+}
