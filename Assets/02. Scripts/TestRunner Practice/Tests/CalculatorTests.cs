@@ -8,7 +8,7 @@ public class CalculatorTests
 {
     public GameObject _gameObject;
 
-    // 각 테스트 실행 전에 무조건 1회 실행, 즉 테스트할 메서드가 100개라면, 100회 실행된다.
+    // 매 테스트 실행 전에 호출, 즉 테스트할 메서드가 100개라면, 총 100회 호출된다.
     [SetUp]
     public void Setup()
     {
@@ -56,10 +56,18 @@ public class CalculatorTests
         return a + b;
     }
 
-    [TearDown] // 테스트 종료시 무조건 실행
+    // 매 테스트 종료시 호출. 즉 테스트할 메서드가 100개라면, 총 100회 호출된다.
+    [TearDown]
     public void TearDown()
     {
         Object.DestroyImmediate(_gameObject);
+    }
+
+    // 전체 테스트 수행 후 단 1회만 실행. OneTimeSetUp에서 할당한 객체는 여기서 해제해줘야 한다.
+    [OneTimeTearDown]
+    public void OneTimeTearDown()
+    {
+
     }
 }
 
