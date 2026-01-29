@@ -61,7 +61,6 @@ public class CalculatorTests
         // 입력(2,3) + 기대값(Returns 5) + 로그에 찍힐 이름(SetName)
         yield return new TestCaseData(2, 3).Returns(5).SetName("일반 덧셈");
         yield return new TestCaseData(0, 0).Returns(0).SetName("0 더하기");
-        yield return new TestCaseData(1, 2).Returns('3').SetName("리턴 타입 불일치 테스트");
     }
 
     [Test]
@@ -74,7 +73,6 @@ public class CalculatorTests
 
     [TestCase(5, 5, 10)]
     [TestCase(8, 4, 12)]
-    [TestCase(0, 0, 1)]
     public void ProductionCirculatorAdd(int a, int b, int expected)
     {
         Assert.AreEqual(_calculator.Add(a, b), expected);
@@ -82,7 +80,6 @@ public class CalculatorTests
 
     [TestCase(100, -78, 178)]
     [TestCase(-20, 4, -24)]
-    [TestCase(0, 0, -1)]
     public void ProductionCirculatorSubtract(int a, int b, int expected)
     {
         Assert.AreEqual(_calculator.Subtract(a, b), expected);
@@ -101,7 +98,6 @@ public class CalculatorTests
     [TestCase(100, 20, 5.0)]
     [TestCase(100, 20, 5)]
     [TestCase(0, 3, 0.0)]
-    [TestCase(7, 0, 0.0)]
     [TestCase(7, 0, null)]
     [TestCase(0, 7, 0.0)]
     [TestCase(5, 2, 2.5)]
